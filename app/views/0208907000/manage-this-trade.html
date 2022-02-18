@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase_banner.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Import your goods into the UK: what you need to do</h1>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Commodity code</dt>
+          <dd class="govuk-summary-list__value">0208907000</dd>
+          {# <dd class="govuk-summary-list__actions">&nbsp;</dd> #}
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Import date</dt>
+          <dd class="govuk-summary-list__value">1 March 2022</dd>
+          {# <dd class="govuk-summary-list__actions">&nbsp;</dd> #}
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Goods coming from</dt>
+          <dd class="govuk-summary-list__value">Argentina</dd>
+          {# <dd class="govuk-summary-list__actions">&nbsp;</dd> #}
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Goods coming into</dt>
+          <dd class="govuk-summary-list__value">     England, Scotland or Wales </dd>
+          {# <dd class="govuk-summary-list__actions">&nbsp;</dd> #}
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Classification</dt>
+          <dd class="govuk-summary-list__value">Live animals; animal products —
+        
+          Meat and edible meat offal —
+        
+          Other meat and edible meat offal, fresh, chilled or frozen —
+        
+          Other —
+        
+          <strong>Frogs' legs</strong></dd>
+          {# <dd class="govuk-summary-list__actions">&nbsp;</dd> #}
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-l">Before you buy the goods</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="question1">Check licences, certificates and other restrictions</a></li>
+        <li><a href="#">Find out the tariffs and taxes to pay</a></li>
+        <li><a href="#">Calculate the tax and duty</a></li>
+        <li><a href="#">Register to bring goods across the border</a></li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Other, less relevant content</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#">Vestibulum a lectus vehicula, pharetra enim non, malesuada augue</li>
+        <li><a href="#">Aliquam quis enim eu tellus facilisis pretium sed tempor sapien.</li>
+        <li><a href="#">Morbi id mi a justo dictum condimentum sed sit amet ex.</li>
+        <li><a href="#">Mauris egestas orci nec urna fringilla luctus nec vitae turpis.</li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}

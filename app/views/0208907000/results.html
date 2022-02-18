@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase_banner.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "question2"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Check licences, certificates and other restrictions</span>
+        You must complete the following steps to complete your trade
+      </h1>
+
+      {% include "includes/results_intro_text.html" %}
+
+      <ol class="govuk-list govuk-list--number">
+        <li>
+          <b>Organic goods</b><br>
+          <div class="govuk-inset-text">
+            {% if data["organic"] != "no" %}
+              <h4 class="govuk-heading-s govuk-!-margin-bottom-0">C644</h4>
+              <p class="govuk-body">You need to register with a <a href="https://www.gov.uk/guidance/organic-food-uk-approved-control-bodies" target="_blank" rel="noopener noreferrer">UK-approved organic control body (opens in new tab)</a> to import organic products.</p>
+              <p class="govuk-body">You must also:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>get a certificate of inspection (COI), signed or stamped by the exporter’s control body, for each consignment of organic goods</li>
+                <li>notify the Port Health Authority (PHA) or Local Authority (LA) that an organic consignment is arriving and must be checked</li>
+                <li>show your certificate of inspection to the PHA or LA when your goods arrive at the port. They will check and stamp the certificate before your goods go to customs for clearance</li>
+              </ul>
+              <p class="govuk-body">
+                <a href="https://www.gov.uk/guidance/importing-and-exporting-organic-food" target="_blank" rel="noopener noreferrer">Read the guidance on importing organic food (opens in new tab)</a>
+              </p>
+            {% else %}
+              <h4 class="govuk-heading-s govuk-!-margin-bottom-0">Y929</h4>
+              <p class="govuk-body">If your goods are not organic, you may need to show proof.</p>
+              <p class="govuk-body">Make sure there are no organic references on the packaging.</p>
+            {% endif %}
+          </div>
+        </li>
+
+        <li>
+          <b>Control on endangered species</b><br>
+          <div class="govuk-inset-text">
+            {% if data["endangered"] != "no" %}
+              <h4 class="govuk-heading-s govuk-!-margin-bottom-0">C400</h4>
+              <p class="govuk-body">If your goods are on the <a href="https://www.gov.uk/guidance/cites-imports-and-exports" target="_blank" rel="noopener noreferrer">CITES (Convention on International Trade in Endangered Species of Wild Fauna and Flora) (opens in new tab)</a> list, you need a CITES permit or certificate to move the goods into or out of Great Britain.</p>
+              <p class="govuk-body">You must make sure that the goods are:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>accompanied by the CITES permit or certificate</li>
+                <li>imported through a <a href="https://www.gov.uk/guidance/trading-cites-listed-specimens-through-uk-ports-and-airports" target="_blank" rel="noopener noreferrer">designated air, land or sea port (opens in new tab)</a>, where UK Border Force will check and endorse the CITES permit or certificate</li>
+              </ul>
+              <p class="govuk-body">
+                <a href="https://www.gov.uk/guidance/apply-for-cites-permits-and-certificates-to-trade-endangered-species" target="_blank" rel="noopener noreferrer">Find out if your goods are CITES listed and how to apply for a CITES permit or certificate to trade endangered species (opens in new tab)</a>
+              </p>
+            {% else %}
+              <h4 class="govuk-heading-s govuk-!-margin-bottom-0">Y900</h4>
+              <p class="govuk-body">If the declared goods are not on the CITES list, you do not need a permit or certificate.</p>
+            {% endif %}
+          </div>
+
+        </li>
+
+        <li>
+          <b>Animal Health Certificate</b><br>
+          <div class="govuk-inset-text">
+            <h4 class="govuk-heading-s govuk-!-margin-bottom-0">9120</h4>
+  <p class="govuk-body">You need a licence to import animal pathogens and products</p>
+<p class="govuk-body"><a href="https://www.gov.uk/government/publications/animal-products-and-pathogens-application-for-import-licence" target="_blank" rel="noopener noreferrer">Apply for a licence to import animal pathogens and products (opens in new tab)</a></p>
+          </div>
+        </li>
+
+        <li>
+          <b>Veterinary controls</b><br>
+          <div class="govuk-inset-text">
+          {# <p class="govuk-body">Follow the rules that apply to import your goods.</p> #}
+      
+        <h3 class="govuk-heading-m">Rules that apply to your goods</h3>
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-0">N853</h4>
+  <p class="govuk-body">If you're <a href="https://www.gov.uk/guidance/importing-live-animals-or-animal-products-from-non-eu-countries" target="_blank" rel="noopener noreferrer">importing animal products from non-EU countries into Great Britain (opens in new tab)</a>, you need a common health entry document for products (CHED-P).</p>
+<p class="govuk-body">Animal products include:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>products of animal origin</li>
+<li>germinal products</li>
+<li>animal by-products</li>
+<li>hay and straw</li>
+<li>foodstuffs containing both products of plant origin and processed products of animal origin (‘composite products’)</li>
+</ul>
+<p class="govuk-body">You must <a href="https://www.gov.uk/guidance/import-of-products-animals-food-and-feed-system" target="_blank" rel="noopener noreferrer">register and login to the IPAFFS service (opens in new tab)</a> to:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>complete part 1 of the CHED-A and notify the border control posts that your goods are arriving</li>
+<li>track any controls or decisions by the authorities relating to the goods</li>
+</ul>
+<p class="govuk-body"><a href="https://www.gov.uk/government/collections/guidance-on-importing-and-exporting-live-animals-or-animal-products" target="_blank" rel="noopener noreferrer">See the collection of guidance and forms for importing living animals or animal products (opens in new tab)</a></p>
+
+    
+        <h3 class="govuk-heading-m">When rules are different or do not apply</h3>
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-0">C084</h4>
+  <p class="govuk-body">If your goods are intended for scientific purposes, research or diagnostic samples, then your goods are exempt.</p>
+
+    
+        
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-0">Y058</h4>
+  <p class="govuk-body">If your goods are for personal consumption or use and weighs less than 2 kilograms, then your goods are exempt.</p>
+          </div>
+        </li>
+
+      </ol>
+
+      <p>
+        <a href="question1">Change answers</a>
+      </p>
+      <p>
+        <a href="manage-this-trade">Return to importing steps page</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

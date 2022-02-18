@@ -8,20 +8,21 @@
   {% include "includes/phase_banner.html" %}
   {{ govukBackLink({
     text: "Back",
-    href: "/manage-this-trade"
+    href: "question3"
   }) }}
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/question2" method="get">
-        {{ govukRadios({
-        idPrefix: "organic",
-        name: "organic",
+      <form action="results" method="get">
+
+      {{ govukRadios({
+        idPrefix: "tree-height",
+        name: "tree-height",
         fieldset: {
           legend: {
-            text: "Are your goods organic?",
+            text: "Are your trees less than 3m tall?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -42,10 +43,11 @@
         ]
       }) }}
 
-        {{ govukButton({
+      {{ govukButton({
         text: "Continue"
       }) }}
       </form>
+
     </div>
   </div>
 

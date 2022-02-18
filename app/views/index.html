@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -10,34 +9,110 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        Prototype your service using GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
-
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+        Additional questions
+      </h1>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="/docs/tutorials-and-examples">Tutorials and templates</a>
+          <a href="/0602904700/manage-this-trade">Example 1 - 0602904700 (Conifers)</a><br>
+          There are 4 measures on this commodity that are all potentially suited
+          to additional questions, as each of them has a single 'certificate' and a 
+          single 'waiver' associated with it.<br><br>
         </li>
         <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+          <a href="/0208907000/manage-this-trade">Example 2 - 0208907000 (Frogs' legs)</a><br>
+          There are 4 measures on this commodity, only 2 of which are suited to
+          additional questions: the other two (animal health certificate and veterinary control)
+          are overly simple and complex respectively.
         </li>
       </ul>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">
+        Questions to ask
+      </h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" style="width:50%">Question</th>
+            <th scope="col" class="govuk-table__header" style="width:50%">Answer</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">How should the <b>sequence</b> of questions be defined? Do we care? </td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Should the answers that are presented back be presented back in the <b>same sequence</b> as the questions were asked?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">What do we do about the measures where we do not ask a question, as there is only a <b>single answer</b> (e.g AHC on frogs' legs)</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">What do we do about the measures where we do not ask a question, as it is <b>too complex</b> (e.g Vet control on frogs' legs)</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">What do we do with the <b>introductory text</b> that is on the current licences and certificates page? Is it needed at all, in part or not 
+            at all, or does it need to be rewritten?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">What do we do with the <b>document codes</b>? These are crucial to this part of the journey to some users - there is no mockup.</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">How do we <b>differentiate the journey</b> for the different user types (trader + dec, trader - dec, agent)</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Has consideration been given to the inclusion of much <b>more complex text</b> that is shown on the Figma prototype (examples in this prototype)</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">How will <b>Appendix 5a and 5b</b> be embedded into this?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">We are presuming that the <b>back control</b> on the results page should go back to the last asked question. Correct?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">We are presuming that the <b>back control</b> on the question pages should go back to the manage-this-trade page or the previous question, depending on the part of the journey. Correct?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">We are presuming that clicking on the <b>browser back button</b> mimics the back control in all cases above. Correct?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Action for the <b>'change answers' link</b> - presume this shoul go back to the first question and there is no desire to remember answers &amp; pre-populate questions?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><b>Bookmarking</b> - what should happen if anyone chooses to bookmark a question page or a results page?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><b>Sharing</b> - what happens when users want to share a page with a friend? What gets saved?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><b>Saving progress</b> - How does this all fit in with the concept of saving progress / the task list component?</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">&nbsp;</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 

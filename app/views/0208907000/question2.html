@@ -8,21 +8,21 @@
   {% include "includes/phase_banner.html" %}
   {{ govukBackLink({
     text: "Back",
-    href: "/question3"
+    href: "question1"
   }) }}
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/results" method="get">
+      <form action="results" method="get">
 
       {{ govukRadios({
-        idPrefix: "tree-height",
-        name: "tree-height",
+        idPrefix: "endangered",
+        name: "endangered",
         fieldset: {
           legend: {
-            text: "Are your trees less than 3m tall?",
+            text: "Are your goods endangered?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
